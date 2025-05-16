@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+  }
+  
+  
+  .container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowShift 8s linear infinite;
+  }
+  
+  
+  .btn-success {
+    background: linear-gradient(to right, #43e97b, #38f9d7);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(56, 249, 215, 0.3);
+  }
+  
+  .btn-success:hover {
+    background: linear-gradient(to right, #38f9d7, #43e97b);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(56, 249, 215, 0.5);
+  }
+  
+ 
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .table thead {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    text-align: center;
+  }
+  
+  .table th, .table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .table tbody tr {
+    background-color: #f9f9f9;
+    transition: background 0.3s ease;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e3f2fd;
+  }
+  
+ 
+  .btn-sm {
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn-sm:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-info {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+  }
+  
+  .btn-warning {
+    background: linear-gradient(to right, #fbc02d, #fdd835);
+    color: white;
+    border: none;
+  }
+  
+ 
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  

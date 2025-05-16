@@ -1,0 +1,74 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #c7d2fe 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60, 72, 88, 0.10);
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 12px 36px rgba(60, 72, 88, 0.18);
+}
+
+h2 {
+  color: #10b981;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-label {
+  color: #374151;
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 1rem;
+  border: 1px solid #a7f3d0;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #f0fdf4;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px #6ee7b7aa;
+  background: #fff;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #34d399 0%, #10b981 100%);
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.7rem 0;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%;
+    padding: 0;
+  }
+  .card {
+    padding: 1.5rem 0.7rem;
+  }
+}

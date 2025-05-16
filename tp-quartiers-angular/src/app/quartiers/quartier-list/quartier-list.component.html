@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 class="mb-4 text-center">Liste des Quartiers</h2>
+
+  <table class="table table-bordered table-hover shadow-sm rounded">
+    <thead class="table-primary">
+      <tr class="text-center">
+        <th>n°</th>
+        <th>Nom</th>
+        <th>Superficie (m²)</th>
+        <th>Nombre de Maisons</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quartier of quartiers; let i = index">
+        <td class="text-center">{{ i + 1 }}</td>
+        <td>{{ quartier.nom }}</td>
+        <td class="text-end">{{ quartier.superficie }}</td>
+        <td class="text-center">{{ quartier.maisons }}</td>
+        <td class="text-center">
+          <a [routerLink]="['/quartiers', quartier.id]" class="btn btn-info btn-sm me-1">Détails</a>
+          <a [routerLink]="['/quartiers', quartier.id, 'edit']" class="btn btn-warning btn-sm">Modifier</a>
+          <button class="btn btn-danger btn-sm ms-1" (click)="deleteQuartier(quartier.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end mt-4">
+    <a routerLink="/quartiers/new" class="btn btn-success btn-lg shadow">Ajouter Quartier</a>
+  </div>
+</div>

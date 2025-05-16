@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow p-4">
+          <h2 class="mb-4 text-center">Ajouter/Modifier un Quartier</h2>
+  
+          <form [formGroup]="quartierForm" (ngSubmit)="submit()">
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" id="nom" formControlName="nom" class="form-control">
+              <div *ngIf="quartierForm.get('nom')?.invalid && quartierForm.get('nom')?.touched" class="text-danger">
+                Nom obligatoire
+              </div>
+            </div>
+  
+            <div class="mb-3">
+              <label for="superficie" class="form-label">Superficie (m²)</label>
+              <input type="number" id="superficie" formControlName="superficie" class="form-control">
+              <div *ngIf="quartierForm.get('superficie')?.invalid && quartierForm.get('superficie')?.touched" class="text-danger">
+                Superficie obligatoire
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary w-100" [disabled]="quartierForm.invalid">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

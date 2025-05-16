@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px;
+    margin: 0;
+  }
+  
+ 
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, #f7971e, #ffd200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowShift 6s infinite linear;
+  }
+  
+  @keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  
+  .card {
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+  }
+  
+  
+  .form-label {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .form-control {
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0,123,255,0.25);
+    outline: none;
+  }
+  
+  
+  .btn-primary {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,123,255,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,123,255,0.3);
+  }
+  

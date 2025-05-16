@@ -1,0 +1,12 @@
+<div class="container py-4">
+  <h2>Détail de la Maison</h2>
+  <div *ngIf="maison">
+    <p><strong>ID :</strong> {{ maison.id }}</p>
+    <p><strong>Nom :</strong> {{ maison.nom }}</p>
+    <p><strong>Superficie :</strong> {{ maison.superficie }} m²</p>
+    <p><strong>Quartier :</strong> {{ maison.quartier }}</p>
+  </div>
+  <div *ngIf="!maison">
+    <p>Maison non trouvée.</p>
+  </div>
+</div>

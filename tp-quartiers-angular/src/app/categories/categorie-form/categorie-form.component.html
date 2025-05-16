@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <h2 class="mb-4 text-center">Ajouter une Catégorie</h2>
+  
+          <form [formGroup]="categorieForm" (ngSubmit)="submit()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom de la Catégorie</label>
+             <input type="text" id="name" class="form-control" formControlName="name">
+            </div>
+  
+            <button class="btn btn-primary w-100" type="submit" [disabled]="categorieForm.invalid">Valider</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Détail du Quartier</h2>
+  
+    <div *ngIf="quartier">
+      <p><strong>Nom:</strong> {{ quartier.nom }}</p>
+      <p><strong>Superficie:</strong> {{ quartier.superficie }} m²</p>
+      <p><strong>Nombre de maisons:</strong> {{ quartier.maisons }}</p>
+  
+      <button (click)="goBack()" class="btn btn-secondary">Retour</button>
+    </div>
+  </div>
+  

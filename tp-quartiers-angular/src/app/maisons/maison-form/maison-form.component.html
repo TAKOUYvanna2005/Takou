@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow p-4">
+          <h2 class="mb-4 text-center">Ajouter/Modifier une Maison</h2>
+  
+          <form [formGroup]="maisonForm" (ngSubmit)="submit()">
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom de la Maison</label>
+              <input type="text" id="nom" class="form-control" formControlName="nom">
+            </div>
+  
+            <div class="mb-3">
+              <label for="superficie" class="form-label">Superficie (m²)</label>
+              <input type="number" id="superficie" class="form-control" formControlName="superficie">
+            </div>
+  
+            <div class="mb-3">
+              <label for="quartier" class="form-label">Quartier</label>
+              <select class="form-control" formControlName="quartierId">
+                <option *ngFor="let quartier of quartiers" [value]="quartier.id">{{ quartier.nom }}</option>
+              </select>
+            </div>
+  
+            <button class="btn btn-primary w-100" type="submit" [disabled]="maisonForm.invalid">Valider</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
